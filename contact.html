@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">YourName</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Get In Touch</h1>
+                <p class="page-subtitle">Let's connect and explore opportunities together</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-section">
+                        <h2>Send me a message</h2>
+                        <p class="form-description">
+                            Whether you want to discuss a project, share an opportunity, or just say hello, 
+                            I'd love to hear from you. I'll get back to you as soon as possible.
+                        </p>
+                        
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <h2>Let's Connect</h2>
+                        <p class="info-description">
+                            I'm always open to discussing new opportunities, interesting projects, 
+                            or just having a good conversation about technology and life.
+                        </p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Email</h4>
+                                    <p>your.email@example.com</p>
+                                    <a href="mailto:your.email@example.com" class="method-link">Send Email</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>LinkedIn</h4>
+                                    <p>Professional networking</p>
+                                    <a href="#" class="method-link">Connect on LinkedIn</a>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>GitHub</h4>
+                                    <p>Check out my code</p>
+                                    <a href="#" class="method-link">View GitHub Profile</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="availability">
+                            <h3>Availability</h3>
+                            <div class="availability-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Response Time: Within 24 hours</span>
+                            </div>
+                            <div class="availability-item">
+                                <i class="fas fa-calendar"></i>
+                                <span>Open to: Full-time opportunities, consulting, collaborations</span>
+                            </div>
+                            <div class="availability-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Location: Bay Area, CA (Open to remote work)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to work together?</h2>
+                    <p>
+                        I'm passionate about building innovative solutions and always excited to take on new challenges. 
+                        Let's create something amazing together!
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="resume.html" class="btn btn-secondary">
+                            <i class="fas fa-user"></i>
+                            View My Resume
+                        </a>
+                        <a href="projects.html" class="btn btn-secondary">
+                            <i class="fas fa-code"></i>
+                            See My Work
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Your Name. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="mailto:your.email@example.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
