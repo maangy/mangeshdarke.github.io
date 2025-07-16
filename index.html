@@ -1,80 +1,124 @@
 <!DOCTYPE html>
-<html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <head>
-    <title>Mangesh Darke</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <script src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </head>
-
-  <body class="body">
-
-  	<div class="wrapper"> 
-      <section class="section" id="intro-section">
-          <div id="name-pic">
-            <div id="name-text-container">
-              <div id="name">Mangesh Darke</div>
-              <h1 id="keywords">Developer | Photographer | Goofy Goober</h1>
-              <div id="navbar">
-              	<nav class="navigation-bar">
-              		<ul class="navbar-content">
-              				<li><a href="https://mangeshdarke.dev/index.html">Home</a></li>
-              				<li><a href="https://mangeshdarke.dev/html/about.html">About</a></li>
-              				<li><a href="https://mangeshdarke.dev/html/projects.html">Projects</a></li>
-              				<li><a href="https://mangeshdarke.dev/html/education.html">Education</a></li>
-              				<li><a href="https://mangeshdarke.dev/html/photography.html">Photography</a></li>
-              		</ul>
-              	</nav>
-              </div>
-              <div class="social-media">
-                <li><a href="https://github.com/MangeshDarke" target="_blank" title="GitHub">
-                      <span class="fa-stack fa-1x">
-                        <i class="fa fa-github fa-stack-1x fa-inverse "></i>
-                      </span>
-                    </a>
-                </li>
-                <li><a href="https://www.linkedin.com/in/mdarke/" target="_blank" title="LinkedIn">
-                      <span class="fa-stack fa-1x">
-                        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                </li>
-                <li><a href="https://twitter.com/MangeshDarke" target="_blank" title="Twitter">
-                      <span class="fa-stack fa-1x">
-                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                </li>
-                <li><a href="https://www.instagram.com/mangeshdarke/" target="_blank" title="Instagram">
-                      <span class="fa-stack fa-1x">
-                        <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                      </span>
-                    </a>
-                </li>
-              </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">YourName</span>
             </div>
-          </div>
-      </section>
-    </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-    <script>
-    $('a').click(function(){
-        if ($('html, body').animate({
-            scrollTop: $( $(this).attr('href') ).offset().top - 50}, 500)) {
-              $('html, body').animate({
-                  scrollTop: $( $(this).attr('href') ).offset().top
-              }, 500);
-        } else {
-          return false;
-        }
-    });
-    </script>
-  </body>
+    <main class="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Hello, I'm <span class="gradient-text">Your Name</span></h1>
+                    <p class="hero-subtitle">Software Engineer at IBM Cloud</p>
+                    <p class="hero-description">
+                        Passionate about software-defined networking and exploring the frontiers of AI. 
+                        When I'm not coding, you'll find me running trails, discovering new boba spots, 
+                        or diving into a good book.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="about.html" class="btn btn-primary">Learn More</a>
+                        <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="highlights">
+            <div class="container">
+                <h2 class="section-title">What I Do</h2>
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Software Engineering</h3>
+                        <p>Building scalable solutions in software-defined networking at IBM Cloud</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI Exploration</h3>
+                        <p>Continuously learning and exploring the latest developments in artificial intelligence</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <h3>Active Lifestyle</h3>
+                        <p>Running, hiking, cycling, and recently completed my first 12K race</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-activities">
+            <div class="container">
+                <h2 class="section-title">Recent Adventures</h2>
+                <div class="activities-grid">
+                    <div class="activity-card">
+                        <div class="activity-icon">🏃‍♂️</div>
+                        <h4>First 12K Race</h4>
+                        <p>Just completed my first 12K race last month - pushing personal boundaries!</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">🧋</div>
+                        <h4>Boba Exploration</h4>
+                        <p>Discovering the best boba spots across the Bay Area, one sip at a time</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="activity-icon">📚</div>
+                        <h4>Learning Journey</h4>
+                        <p>Currently exploring new languages and piano - never stop growing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Your Name. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="mailto:your.email@example.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
