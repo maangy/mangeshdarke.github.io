@@ -1,124 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Software Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mangesh Darke — Software Engineer based in the Bay Area.">
+  <title>Mangesh Darke</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">YourName</span>
-            </div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="resume.html" class="nav-link">Resume</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
+  <div class="layout">
+
+    <!-- ── Left Sidebar (sticky) ──────────────────────────── -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+
+        <div class="sidebar-top">
+          <h1 class="site-name">Mangesh Darke</h1>
+          <h2 class="site-role">Software Engineer</h2>
+          <p class="site-tagline">I build things for the cloud — and collect watches for the soul.</p>
+
+          <nav class="sidebar-nav" aria-label="In-page links">
+            <ul>
+              <li>
+                <a href="#about" class="nav-item" data-section="about">
+                  <span class="nav-line"></span>
+                  <span class="nav-label">About</span>
+                </a>
+              </li>
+              <li>
+                <a href="#experience" class="nav-item" data-section="experience">
+                  <span class="nav-line"></span>
+                  <span class="nav-label">Experience</span>
+                </a>
+              </li>
+              <li>
+                <a href="#projects" class="nav-item" data-section="projects">
+                  <span class="nav-line"></span>
+                  <span class="nav-label">Projects</span>
+                </a>
+              </li>
+              <li>
+                <a href="#life" class="nav-item" data-section="life">
+                  <span class="nav-line"></span>
+                  <span class="nav-label">Life</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
-    </nav>
 
-    <main class="main-content">
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Hello, I'm <span class="gradient-text">Your Name</span></h1>
-                    <p class="hero-subtitle">Software Engineer at IBM Cloud</p>
-                    <p class="hero-description">
-                        Passionate about software-defined networking and exploring the frontiers of AI. 
-                        When I'm not coding, you'll find me running trails, discovering new boba spots, 
-                        or diving into a good book.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="about.html" class="btn btn-primary">Learn More</a>
-                        <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="sidebar-bottom">
+          <a href="https://github.com/MangeshDarke" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/mdarke/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="mailto:mangeshdarke@gmail.com" class="social-link" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        </div>
 
-        <section class="highlights">
-            <div class="container">
-                <h2 class="section-title">What I Do</h2>
-                <div class="highlights-grid">
-                    <div class="highlight-card">
-                        <div class="highlight-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Software Engineering</h3>
-                        <p>Building scalable solutions in software-defined networking at IBM Cloud</p>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>AI Exploration</h3>
-                        <p>Continuously learning and exploring the latest developments in artificial intelligence</p>
-                    </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon">
-                            <i class="fas fa-running"></i>
-                        </div>
-                        <h3>Active Lifestyle</h3>
-                        <p>Running, hiking, cycling, and recently completed my first 12K race</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      </div>
+    </aside>
 
-        <section class="recent-activities">
-            <div class="container">
-                <h2 class="section-title">Recent Adventures</h2>
-                <div class="activities-grid">
-                    <div class="activity-card">
-                        <div class="activity-icon">🏃‍♂️</div>
-                        <h4>First 12K Race</h4>
-                        <p>Just completed my first 12K race last month - pushing personal boundaries!</p>
-                    </div>
-                    <div class="activity-card">
-                        <div class="activity-icon">🧋</div>
-                        <h4>Boba Exploration</h4>
-                        <p>Discovering the best boba spots across the Bay Area, one sip at a time</p>
-                    </div>
-                    <div class="activity-card">
-                        <div class="activity-icon">📚</div>
-                        <h4>Learning Journey</h4>
-                        <p>Currently exploring new languages and piano - never stop growing</p>
-                    </div>
-                </div>
+    <!-- ── Right Content (scrolls) ────────────────────────── -->
+    <main class="content">
+
+      <!-- About -->
+      <section id="about">
+        <h2 class="section-heading">
+          <span class="section-num">01.</span> About
+        </h2>
+
+        <div class="about-body">
+          <p>
+            I'm a software engineer at
+            <a href="https://www.ibm.com/cloud" class="inline-link" target="_blank" rel="noopener">IBM Cloud</a>
+            based in the Bay Area, where I work on software-defined networking
+            infrastructure. I studied Electrical Engineering and Computer Science at
+            <a href="https://eecs.berkeley.edu" class="inline-link" target="_blank" rel="noopener">UC Berkeley</a>.
+          </p>
+          <p>
+            I care about building things that are reliable, thoughtful, and well-crafted —
+            the same qualities that draw me to mechanical watches, Japanese design, and
+            good hardware. I think the best software, like the best objects, disappears
+            into the background and just works.
+          </p>
+          <p>
+            When I'm not in front of a screen, I'm usually on a trail, tracking flight
+            prices to somewhere new, or down a rabbit hole about something I probably
+            don't need to know as much about as I do.
+          </p>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience">
+        <h2 class="section-heading">
+          <span class="section-num">02.</span> Experience
+        </h2>
+
+        <div class="exp-list">
+
+          <div class="exp-card reveal">
+            <div class="exp-date">2021 — Present</div>
+            <div class="exp-body">
+              <h3 class="exp-title">
+                Software Engineer ·
+                <a href="https://www.ibm.com/cloud" class="exp-company" target="_blank" rel="noopener">
+                  IBM Cloud <span class="ext-icon">↗</span>
+                </a>
+              </h3>
+              <p class="exp-desc">
+                Build and maintain scalable infrastructure for IBM Cloud's
+                software-defined networking platform. Work across distributed
+                systems with a focus on reliability, performance, and operational
+                excellence at cloud scale.
+              </p>
+              <ul class="tag-list">
+                <li>Python</li>
+                <li>Go</li>
+                <li>SDN</li>
+                <li>Distributed Systems</li>
+                <li>Cloud Infrastructure</li>
+              </ul>
             </div>
-        </section>
+          </div>
+
+          <div class="exp-card reveal">
+            <div class="exp-date">2016 — 2020</div>
+            <div class="exp-body">
+              <h3 class="exp-title">
+                B.A. EECS ·
+                <a href="https://eecs.berkeley.edu" class="exp-company" target="_blank" rel="noopener">
+                  UC Berkeley <span class="ext-icon">↗</span>
+                </a>
+              </h3>
+              <p class="exp-desc">
+                Studied Electrical Engineering and Computer Science. Coursework
+                in algorithms, computer architecture, machine learning, and
+                operating systems.
+              </p>
+              <ul class="tag-list">
+                <li>EECS</li>
+                <li>Algorithms</li>
+                <li>Machine Learning</li>
+                <li>Systems</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2 class="section-heading">
+          <span class="section-num">03.</span> Projects
+        </h2>
+
+        <div class="project-list">
+          <div class="project-card reveal">
+            <div class="project-header">
+              <span class="project-tag">Mobile</span>
+              <span class="project-status">
+                <span class="status-dot"></span> Coming Soon
+              </span>
+            </div>
+            <p class="project-desc">New project in the works.</p>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-header">
+              <span class="project-tag">Web</span>
+              <span class="project-status">
+                <span class="status-dot"></span> Coming Soon
+              </span>
+            </div>
+            <p class="project-desc">New project in the works.</p>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-header">
+              <span class="project-tag">Tool</span>
+              <span class="project-status">
+                <span class="status-dot"></span> Coming Soon
+              </span>
+            </div>
+            <p class="project-desc">New project in the works.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Life -->
+      <section id="life">
+        <h2 class="section-heading">
+          <span class="section-num">04.</span> Life
+        </h2>
+
+        <div class="photo-grid reveal">
+          <div class="photo-cell cell-tall">
+            <img src="img/GoldenGateBridge.jpg" alt="Golden Gate Bridge" loading="lazy">
+          </div>
+          <div class="photo-cell">
+            <img src="img/IMG_8866.jpeg" alt="" loading="lazy">
+          </div>
+          <div class="photo-cell">
+            <img src="img/IMG_2746.jpg" alt="" loading="lazy">
+          </div>
+          <div class="photo-cell cell-tall">
+            <img src="img/queenstraight.jpg" alt="" loading="lazy">
+          </div>
+          <div class="photo-cell">
+            <img src="img/IMG_5671.JPG" alt="" loading="lazy">
+          </div>
+          <div class="photo-cell">
+            <img src="img/IMG_2460.jpg" alt="" loading="lazy">
+          </div>
+        </div>
+
+        <div class="interests reveal">
+          <span class="tag">Avatar: The Last Airbender</span>
+          <span class="tag">Star Wars</span>
+          <span class="tag">Mechanical Watches</span>
+          <span class="tag">Trail Running</span>
+          <span class="tag">Cars</span>
+          <span class="tag">Traveling</span>
+          <span class="tag">Marvel &amp; DC</span>
+          <span class="tag">Apple</span>
+          <span class="tag">Japandi Design</span>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          Designed &amp; Built by Mangesh Darke
+        </p>
+        <p class="footer-domain">mange.sh</p>
+      </footer>
+
     </main>
+  </div>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Your Name. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="mailto:your.email@example.com" class="social-link"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
