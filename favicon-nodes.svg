@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <rect x="0" y="0" width="120" height="120" rx="24" fill="#FAF8F3" stroke="#D9D2C5" stroke-width="1.5"/>
+  <!-- Connection lines -->
+  <line x1="34" y1="90" x2="34" y2="30"  stroke="#1C3557" stroke-width="1.8"/>
+  <line x1="34" y1="30" x2="60" y2="62"  stroke="#1C3557" stroke-width="1.8"/>
+  <line x1="60" y1="62" x2="86" y2="30"  stroke="#1C3557" stroke-width="1.8"/>
+  <line x1="86" y1="30" x2="86" y2="90"  stroke="#1C3557" stroke-width="1.8"/>
+  <!-- Midpoint hop nodes -->
+  <circle cx="34" cy="60" r="4.5" fill="white" stroke="#1C3557" stroke-width="1.5"/>
+  <circle cx="34" cy="60" r="1.8" fill="#6B9DC2"/>
+  <circle cx="47" cy="46" r="4.5" fill="white" stroke="#1C3557" stroke-width="1.5"/>
+  <circle cx="47" cy="46" r="1.8" fill="#6B9DC2"/>
+  <circle cx="73" cy="46" r="4.5" fill="white" stroke="#1C3557" stroke-width="1.5"/>
+  <circle cx="73" cy="46" r="1.8" fill="#6B9DC2"/>
+  <circle cx="86" cy="60" r="4.5" fill="white" stroke="#1C3557" stroke-width="1.5"/>
+  <circle cx="86" cy="60" r="1.8" fill="#6B9DC2"/>
+  <!-- Main vertex nodes -->
+  <circle cx="34" cy="90" r="8" fill="white" stroke="#1C3557" stroke-width="2"/>
+  <circle cx="34" cy="90" r="3.5" fill="#C4A55A"/>
+  <circle cx="34" cy="30" r="8" fill="white" stroke="#1C3557" stroke-width="2"/>
+  <circle cx="34" cy="30" r="3.5" fill="#C4A55A"/>
+  <circle cx="60" cy="62" r="8" fill="white" stroke="#1C3557" stroke-width="2"/>
+  <circle cx="60" cy="62" r="3.5" fill="#C4A55A"/>
+  <circle cx="86" cy="30" r="8" fill="white" stroke="#1C3557" stroke-width="2"/>
+  <circle cx="86" cy="30" r="3.5" fill="#C4A55A"/>
+  <circle cx="86" cy="90" r="8" fill="white" stroke="#1C3557" stroke-width="2"/>
+  <circle cx="86" cy="90" r="3.5" fill="#C4A55A"/>
+</svg>

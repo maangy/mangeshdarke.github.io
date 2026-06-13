@@ -5,85 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Mangesh Darke — Software Engineer based in the Bay Area.">
   <title>Mangesh Darke</title>
+  <link rel="icon" type="image/svg+xml" href="favicon-pixel.svg?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="layout">
+  <!-- ░░ IDEA 3: Boot handshake (plays once on load) ░░ -->
+  <div id="boot" class="boot" aria-hidden="true">
+    <div class="boot-inner">
+      <div class="boot-line"><span class="nc-prompt">$</span> connect mange.sh</div>
+      <div class="boot-line bl" data-i="1"><span class="boot-arrow">───▶</span> SYN</div>
+      <div class="boot-line bl" data-i="2">SYN-ACK <span class="boot-arrow">◀───</span></div>
+      <div class="boot-line bl" data-i="3"><span class="boot-arrow">───▶</span> ACK</div>
+      <div class="boot-line bl boot-ok" data-i="4">✓ connection established</div>
+    </div>
+  </div>
 
-    <!-- ── Left Sidebar (sticky) ──────────────────────────── -->
-    <aside class="sidebar">
-      <div class="sidebar-inner">
+  <!-- ░░ IDEA 1: Packet-journey rail (left margin) ░░ -->
+  <aside class="rail" aria-hidden="true">
+    <div class="rail-wire"></div>
+    <div class="rail-fill" id="railFill"></div>
+    <div class="rail-packet" id="railPacket"></div>
+    <div class="rail-node rail-origin" style="top:0%">
+      <svg class="rail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+      <span class="rail-label">localhost</span>
+    </div>
+    <a href="#about" class="rail-node" data-section="about" style="top:25%"><span class="rail-label">about · <em>2.1ms</em></span></a>
+    <a href="#experience" class="rail-node" data-section="experience" style="top:50%"><span class="rail-label">experience · <em>8.4ms</em></span></a>
+    <a href="#projects" class="rail-node" data-section="projects" style="top:75%"><span class="rail-label">projects · <em>22.1ms</em></span></a>
+    <a href="#life" class="rail-node" data-section="life" style="top:100%"><span class="rail-label">life · <em>45.3ms</em></span></a>
+  </aside>
 
-        <div class="sidebar-top">
-          <h1 class="site-name">Mangesh Darke</h1>
-          <h2 class="site-role">Software Engineer</h2>
-          <p class="site-tagline">I build things for the cloud — and collect watches for the soul.</p>
+  <div class="page">
 
-          <nav class="sidebar-nav" aria-label="In-page links">
-            <ul>
-              <li>
-                <a href="#about" class="nav-item" data-section="about">
-                  <span class="nav-line"></span>
-                  <span class="nav-label">About</span>
-                </a>
-              </li>
-              <li>
-                <a href="#experience" class="nav-item" data-section="experience">
-                  <span class="nav-line"></span>
-                  <span class="nav-label">Experience</span>
-                </a>
-              </li>
-              <li>
-                <a href="#projects" class="nav-item" data-section="projects">
-                  <span class="nav-line"></span>
-                  <span class="nav-label">Projects</span>
-                </a>
-              </li>
-              <li>
-                <a href="#life" class="nav-item" data-section="life">
-                  <span class="nav-line"></span>
-                  <span class="nav-label">Life</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="sidebar-bottom">
-          <a href="https://github.com/MangeshDarke" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/mdarke/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
-          <a href="mailto:mangeshdarke@gmail.com" class="social-link" aria-label="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          </a>
-        </div>
-
-      </div>
-    </aside>
-
-    <!-- ── Right Content (scrolls) ────────────────────────── -->
+    <!-- ── Main ────────────────────────────────────────────────── -->
     <main class="content">
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-top">
+          <div class="hero-text">
+            <h1 class="hero-name">Mangesh Darke</h1>
+            <p class="hero-role">Software Engineer · <a href="https://www.ibm.com/cloud" class="accent-link" target="_blank" rel="noopener">IBM Cloud</a></p>
+            <p class="hero-tagline">I build things for the cloud — and collect watches for the soul.</p>
+          </div>
+          <img src="img/me.JPG" alt="Mangesh Darke" class="hero-photo">
+        </div>
+
+        <div class="social-row">
+          <a href="https://github.com/MangeshDarke" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+          <span class="social-sep"></span>
+          <a href="https://www.linkedin.com/in/mdarke/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <span class="social-sep"></span>
+          <a href="mailto:mangeshdarke@gmail.com" class="social-link" target="_blank" rel="noopener" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+          <span class="social-sep"></span>
+          <a href="resume.pdf" class="social-link" target="_blank" rel="noopener" aria-label="Resume">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </a>
+        </div>
+
+      </section>
 
       <!-- About -->
       <section id="about">
-        <h2 class="section-heading">
-          <span class="section-num">01.</span> About
+        <h2 class="section-heading hop-heading" data-section="about">
+          <span class="sh-hop">hop 01</span>
+          <span class="sh-name">About</span>
+          <span class="sh-lat">2.1 ms</span>
+          <span class="sh-rule"></span>
         </h2>
-
-        <div class="about-body">
+        <div class="prose">
           <p>
             I'm a software engineer at
-            <a href="https://www.ibm.com/cloud" class="inline-link" target="_blank" rel="noopener">IBM Cloud</a>
+            <a href="https://www.ibm.com/cloud" class="accent-link" target="_blank" rel="noopener">IBM Cloud</a>
             based in the Bay Area, where I work on software-defined networking
-            infrastructure. I studied Electrical Engineering and Computer Science at
-            <a href="https://eecs.berkeley.edu" class="inline-link" target="_blank" rel="noopener">UC Berkeley</a>.
+            infrastructure for the VPC platform. I studied Computer Science at
+            <a href="https://cs.berkeley.edu" class="accent-link" target="_blank" rel="noopener">UC Berkeley</a>.
           </p>
           <p>
             I care about building things that are reliable, thoughtful, and well-crafted —
@@ -101,27 +107,31 @@
 
       <!-- Experience -->
       <section id="experience">
-        <h2 class="section-heading">
-          <span class="section-num">02.</span> Experience
+        <h2 class="section-heading hop-heading" data-section="experience">
+          <span class="sh-hop">hop 02</span>
+          <span class="sh-name">Experience</span>
+          <span class="sh-lat">8.4 ms</span>
+          <span class="sh-rule"></span>
         </h2>
 
+        <h3 class="exp-subhead">Experience</h3>
         <div class="exp-list">
 
-          <div class="exp-card reveal">
-            <div class="exp-date">2021 — Present</div>
+          <div class="exp-row reveal">
+            <div class="exp-meta">
+              <img src="img/ibm.svg" class="exp-logo" alt="IBM">
+              <span class="exp-date">2022 — Present</span>
+            </div>
             <div class="exp-body">
               <h3 class="exp-title">
                 Software Engineer ·
-                <a href="https://www.ibm.com/cloud" class="exp-company" target="_blank" rel="noopener">
-                  IBM Cloud <span class="ext-icon">↗</span>
-                </a>
+                <a href="https://www.ibm.com/cloud" class="accent-link" target="_blank" rel="noopener">IBM Cloud ↗</a>
               </h3>
-              <p class="exp-desc">
-                Build and maintain scalable infrastructure for IBM Cloud's
-                software-defined networking platform. Work across distributed
-                systems with a focus on reliability, performance, and operational
-                excellence at cloud scale.
-              </p>
+              <ul class="exp-bullets">
+                <li>Build and maintain scalable infrastructure for IBM Cloud's software-defined networking platform.</li>
+                <li>Work across distributed systems with a focus on reliability and performance at cloud scale.</li>
+                <li>Drive operational excellence through automation, monitoring, and incident response.</li>
+              </ul>
               <ul class="tag-list">
                 <li>Python</li>
                 <li>Go</li>
@@ -132,25 +142,30 @@
             </div>
           </div>
 
-          <div class="exp-card reveal">
-            <div class="exp-date">2016 — 2020</div>
+        </div>
+
+        <h3 class="exp-subhead">Education</h3>
+        <div class="exp-list">
+
+          <div class="exp-row reveal">
+            <div class="exp-meta">
+              <img src="img/berkeley.svg" class="exp-logo" alt="UC Berkeley">
+              <span class="exp-date">2018 — 2020</span>
+            </div>
             <div class="exp-body">
               <h3 class="exp-title">
-                B.A. EECS ·
-                <a href="https://eecs.berkeley.edu" class="exp-company" target="_blank" rel="noopener">
-                  UC Berkeley <span class="ext-icon">↗</span>
-                </a>
+                B.A. Computer Science ·
+                <a href="https://cs.berkeley.edu" class="accent-link" target="_blank" rel="noopener">UC Berkeley ↗</a>
               </h3>
               <p class="exp-desc">
-                Studied Electrical Engineering and Computer Science. Coursework
-                in algorithms, computer architecture, machine learning, and
-                operating systems.
+                Studied Computer Science. Coursework in algorithms, computer
+                architecture, machine learning, and operating systems.
               </p>
               <ul class="tag-list">
-                <li>EECS</li>
                 <li>Algorithms</li>
                 <li>Machine Learning</li>
                 <li>Systems</li>
+                <li>Computer Architecture</li>
               </ul>
             </div>
           </div>
@@ -160,13 +175,17 @@
 
       <!-- Projects -->
       <section id="projects">
-        <h2 class="section-heading">
-          <span class="section-num">03.</span> Projects
+        <h2 class="section-heading hop-heading" data-section="projects">
+          <span class="sh-hop">hop 03</span>
+          <span class="sh-name">Projects</span>
+          <span class="sh-lat">22.1 ms</span>
+          <span class="sh-rule"></span>
         </h2>
 
         <div class="project-list">
-          <div class="project-card reveal">
-            <div class="project-header">
+
+          <div class="project-row reveal">
+            <div class="project-meta">
               <span class="project-tag">Mobile</span>
               <span class="project-status">
                 <span class="status-dot"></span> Coming Soon
@@ -175,8 +194,8 @@
             <p class="project-desc">New project in the works.</p>
           </div>
 
-          <div class="project-card reveal">
-            <div class="project-header">
+          <div class="project-row reveal">
+            <div class="project-meta">
               <span class="project-tag">Web</span>
               <span class="project-status">
                 <span class="status-dot"></span> Coming Soon
@@ -185,8 +204,8 @@
             <p class="project-desc">New project in the works.</p>
           </div>
 
-          <div class="project-card reveal">
-            <div class="project-header">
+          <div class="project-row reveal">
+            <div class="project-meta">
               <span class="project-tag">Tool</span>
               <span class="project-status">
                 <span class="status-dot"></span> Coming Soon
@@ -194,13 +213,17 @@
             </div>
             <p class="project-desc">New project in the works.</p>
           </div>
+
         </div>
       </section>
 
       <!-- Life -->
       <section id="life">
-        <h2 class="section-heading">
-          <span class="section-num">04.</span> Life
+        <h2 class="section-heading hop-heading" data-section="life">
+          <span class="sh-hop">hop 04</span>
+          <span class="sh-name">Life</span>
+          <span class="sh-lat">45.3 ms</span>
+          <span class="sh-rule"></span>
         </h2>
 
         <div class="photo-grid reveal">
@@ -237,11 +260,15 @@
         </div>
       </section>
 
+      <!-- ░░ IDEA 4: Ping footer ░░ -->
       <footer>
-        <p>
-          Designed &amp; Built by Mangesh Darke
-        </p>
-        <p class="footer-domain">mange.sh</p>
+        <div class="ping-block">
+          <div class="ping-line"><span class="nc-prompt">$</span> ping mange.sh</div>
+          <div class="ping-line ping-stat">64 bytes from mange.sh: icmp_seq=1 time=2.1 ms</div>
+          <div class="ping-line ping-stat">64 bytes from mange.sh: icmp_seq=2 time=1.9 ms</div>
+          <div class="ping-line ping-stat">64 bytes from mange.sh: icmp_seq=3 time=2.0 ms</div>
+          <div class="ping-line ping-summary">--- mange.sh ping statistics · designed &amp; built by Mangesh Darke ---</div>
+        </div>
       </footer>
 
     </main>
