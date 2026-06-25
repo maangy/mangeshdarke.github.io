@@ -678,15 +678,15 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 180px 180px;
-  gap: 6px;
+  gap: 10px;
   margin-bottom: 28px;
-  border-radius: 8px;
-  overflow: hidden;
 }
 
 .photo-cell {
   overflow: hidden;
   background: var(--bg-surface);
+  border-radius: 10px;
+  cursor: zoom-in;
 }
 
 .photo-cell img {
@@ -700,6 +700,43 @@ section {
 }
 
 .cell-tall { grid-row: span 2; }
+
+/* ── Lightbox ──────────────────────────────────────────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(20, 18, 15, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5vh 5vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  cursor: zoom-out;
+}
+
+.lightbox.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-img {
+  width: auto;
+  height: auto;
+  max-width: 92vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  transform: scale(0.96);
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.lightbox.open .lightbox-img {
+  transform: scale(1);
+}
 
 .interests {
   display: flex;

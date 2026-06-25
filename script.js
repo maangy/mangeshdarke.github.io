@@ -134,6 +134,36 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
   obs.observe(block);
 })();
 
+/* ░░ Lightbox: expand Life photos on click ░░ */
+(function () {
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightboxImg');
+  if (!lb || !lbImg) return;
+
+  function open(img) {
+    lbImg.src = img.currentSrc || img.src;
+    lbImg.alt = img.alt || '';
+    lb.classList.add('open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lb.classList.remove('open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.photo-cell img').forEach(img => {
+    img.addEventListener('click', () => open(img));
+  });
+
+  lb.addEventListener('click', close);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && lb.classList.contains('open')) close();
+  });
+})();
+
 /* ── Scroll reveal ───────────────────────────────────────────── */
 const revealObserver = new IntersectionObserver(
   entries => {
